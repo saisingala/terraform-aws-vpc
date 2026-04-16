@@ -14,6 +14,10 @@ output "databse_subnet_ids" {
     value = aws_subnet.database[*].id
 }
 
+output "databse_subnet_group_name" {
+    value = aws_db_subnet_group.default.name  # this for 40-rds
+}
+
 output "aws_info" {
     value = data.aws_availability_zones.available
 }
